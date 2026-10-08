@@ -10,7 +10,7 @@ An automated Security Orchestration, Automation, and Response (SOAR) pipeline de
 - **Mitigation Protocols:** Automated Firewall Drop Rule Simulation (IP Tables / NACLs)
 - **Telemetry Processing:** Real-Time Log File Ingestion Parsing
 
-## Live Production Proof
+## Live Security Automation Demonstration (SIEM Dashboard Alert)
 Below is the live operational verification showing the SOAR pipeline intercepting an active multi-line Brute-Force Authentication Threat and broadcasting high-fidelity data to the target monitoring endpoint:
 
 ![Live Discord Security Alert](soar_alert_output.png)
