@@ -28,7 +28,7 @@ The pipeline automatically provisions local relational tables and logs intercept
 
 ## Relational Database Telemetry (SQLite Ingestion)
 
-To ensure persistent threat logging, the automated workflow writes all intercepted adversary data directly to a local SQLite database instance. Below is the raw table state extracted using DB Browser for SQLite
+To ensure persistent threat logging, the automated workflow writes all intercepted adversary data directly to a local SQLite database instance. Below is the raw table state extracted using DB Browser for SQLite:
 
 ![DB Browser for SQLite - blocked_adversaries table](threat_intel_db.png)
 
