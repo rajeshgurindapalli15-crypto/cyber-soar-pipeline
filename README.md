@@ -26,3 +26,9 @@ The pipeline automatically provisions local relational tables and logs intercept
 | 3 | 2026-10-07 19:40:27 | 185.220.101.5 | Malicious Web Reconnaissance Scan | Netherlands | Amsterdam | Tor Exit Network Pool | 3 |
 | 4 | 2026-10-07 19:40:42 | 91.219.236.4 | Malicious Web Reconnaissance Scan | Ukraine | Kyiv | Volia Broadband Node | 3 |
 
+## Relational Database Telemetry (SQLite Ingestion)
+
+The pipeline automatically provisions local SQLite tables (`blocked_adversaries`) to persist telemetry on intercepted malicious actors[cite: 4]. Below is the live data view inspected via DB Browser for SQLite[cite: 4]:
+
+![DB Browser for SQLite - blocked_adversaries table](threat_intel_db.png)
+
