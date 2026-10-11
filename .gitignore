@@ -1,4 +1,4 @@
 .env
 __pycache__/
-*.db
-auth.log
+.pytest_cache/
+soar_audit.db
