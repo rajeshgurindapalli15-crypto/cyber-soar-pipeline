@@ -45,25 +45,31 @@ Edge auditing records individual and multi-vector security events locally for im
 ![SQLite Edge Audit Table](assets/soar_sqlite_output.png)
 
 
-## Step 4: Centralized Cloud Threat Intelligence (MongoDB Atlas CLI View)
-The CLI queries the cloud cluster to render a consolidated view of global threat intelligence via Rich tables.
-
-![MongoDB CLI Threat View](assets/soar_mongo_cli_output.png)
-
-
-## Step 5. Automated Real-Time Alerting (Discord Webhook)
-Demonstrates automated, real-time incident dispatches triggered via Discord webhooks upon threat detection. The pipeline formats dynamic JSON payloads with rich contextual telemetry—including attacker IP, geographical origin, ISP details, and automated firewall mitigation strategies—enabling immediate visibility for SOC analysts.
-
-![Discord Real-Time Alert Output](assets/soar_discord_alert_output.png)
-
-
-## Step 6: Local Edge Persistence (SQLite)
+## Step 4: Local Edge Persistence (SQLite)
 Below is the tabular inspection of local audit logs using **DB Browser for SQLite**:
 
 ![SQLite DB Browser View](assets/soar_sqlite_gui_output.png)
 
 
-## Step 7: Cloud Dashboard Persistence (MongoDB Atlas Cloud UI)
+## Step 5: Centralized Cloud Threat Intelligence (MongoDB Atlas CLI View)
+The CLI queries the cloud cluster to render a consolidated view of global threat intelligence via Rich tables.
+
+![MongoDB CLI Threat View](assets/soar_mongo_cli_output.png)
+
+
+## Step 6: Cloud Dashboard Persistence (MongoDB Atlas Cloud UI)
 Live document storage verified directly within the MongoDB Atlas cloud cluster dashboard, displaying structured JSON audit documents.
 
 ![MongoDB Atlas Dashboard UI](assets/soar_mongodb_atlas_ui.png)
+
+
+## Step 7. Automated Real-Time Alerting (Discord Webhook)
+Demonstrates automated, real-time incident dispatches triggered via Discord webhooks upon threat detection. The pipeline formats dynamic JSON payloads with rich contextual telemetry—including attacker IP, geographical origin, ISP details, and automated firewall mitigation strategies—enabling immediate visibility for SOC analysts.
+
+![Discord Real-Time Alert Output](assets/soar_discord_alert_output.png)
+
+
+
+
+
+
