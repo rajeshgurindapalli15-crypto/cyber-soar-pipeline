@@ -33,12 +33,10 @@ When a security incident is triggered from the CLI, the pipeline initializes, lo
 ![SOAR Playbook Execution](assets/soar_execution_output.png)
 
 
-
 ### Step 2: Automated Unit Testing
 The system validates component resilience and data structures via automated `pytest` execution.
 
 ![Pytest Suite Passed](assets/soar_pytest_output.png)
-
 
 
 ## Step 3: Local Edge Audit Log Persistence (SQLite)
@@ -47,26 +45,23 @@ Edge auditing records individual and multi-vector security events locally for im
 ![SQLite Edge Audit Table](assets/soar_sqlite_output.png)
 
 
-
 ## Step 4: Centralized Cloud Threat Intelligence (MongoDB Atlas CLI View)
 The CLI queries the cloud cluster to render a consolidated view of global threat intelligence via Rich tables.
 
 ![MongoDB CLI Threat View](assets/soar_mongo_cli_output.png)
 
 
-## 5. Automated Real-Time Alerting (Discord Webhook)
+## Step 5. Automated Real-Time Alerting (Discord Webhook)
 Demonstrates automated, real-time incident dispatches triggered via Discord webhooks upon threat detection. The pipeline formats dynamic JSON payloads with rich contextual telemetry—including attacker IP, geographical origin, ISP details, and automated firewall mitigation strategies—enabling immediate visibility for SOC analysts.
 
 ![Discord Real-Time Alert Output](assets/soar_discord_alert_output.png)
-
-
-
 
 
 # Step 6: Local Edge Persistence (SQLite)
 Below is the tabular inspection of local audit logs using **DB Browser for SQLite**:
 
 ![SQLite DB Browser View](assets/soar_sqlite_gui_output.png)
+
 
 ## Step 7: Cloud Dashboard Persistence (MongoDB Atlas Cloud UI)
 Live document storage verified directly within the MongoDB Atlas cloud cluster dashboard, displaying structured JSON audit documents.
