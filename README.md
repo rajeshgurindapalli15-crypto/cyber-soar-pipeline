@@ -1,7 +1,7 @@
 # 🛡️ Cloud-Native SOAR: Automated Threat Detection & Incident Response Pipeline
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Database](https://img.shields.io/badge/Storage-SQLite%20%7C%20MongoDB%20Atlas-green.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Database](https://img.shields.io/badge/Storage-SQLite3%20%7C%20MongoDB%20Atlas-green.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Alerting](https://img.shields.io/badge/Alerts-Discord%20Webhooks-5865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/)
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=for-the-badge)](LICENSE)
 [![DevSecOps Compliance](https://img.shields.io/badge/Compliance-ISO%208601%20UTC-orange.svg?style=for-the-badge)](#)
