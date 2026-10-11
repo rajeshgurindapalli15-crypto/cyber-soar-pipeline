@@ -31,32 +31,32 @@ Below is the sequential end-to-end operational proof demonstrating the `cyber-so
 ## Step 1: Automated SOAR Playbook Execution
 When a security incident is triggered from the CLI, the pipeline initializes, logs locally to SQLite, publishes threat intelligence to MongoDB Atlas, and dispatches an instant webhook alert[cite: 7, 10].
 
-![SOAR Playbook Execution](soar_execution_output.png)
+![SOAR Playbook Execution](assets/soar_execution_output.png)
 
 ---
 
 ### Step 2: Automated Unit Testing
 The system validates component resilience and data structures via automated `pytest` execution.
 
-![Pytest Suite Passed](soar_pytest_output.png)
+![Pytest Suite Passed](assets/soar_pytest_output.png)
 
 ---
 
 ## Step 3: Local Edge Audit Log Persistence (SQLite)
 Edge auditing records individual and multi-vector security events locally for immediate forensic inspection.
 
-![SQLite Edge Audit Table](soar_sqlite_output.png)
+![SQLite Edge Audit Table](assets/soar_sqlite_output.png)
 
 ---
 
 ### Step 4: Centralized Cloud Threat Intelligence (MongoDB Atlas CLI View)
 The CLI queries the cloud cluster to render a consolidated view of global threat intelligence via Rich tables.
 
-![MongoDB CLI Threat View](soar_mongo_cli_output.png)
+![MongoDB CLI Threat View](assets/soar_mongo_cli_output.png)
 
 ---
 
 ### Step 5: Cloud Dashboard Persistence (MongoDB Atlas Cloud UI)
 Live document storage verified directly within the MongoDB Atlas cloud cluster dashboard, displaying structured JSON audit documents.
 
-![MongoDB Atlas Dashboard UI](soar_mongodb_atlas_ui.png)
+![MongoDB Atlas Dashboard UI](assets/soar_mongodb_atlas_ui.png)
