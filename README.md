@@ -55,6 +55,10 @@ The CLI queries the cloud cluster to render a consolidated view of global threat
 ![MongoDB CLI Threat View](assets/soar_mongo_cli_output.png)
 
 ---
+### Step 6: Local Edge Persistence (SQLite)
+Below is the tabular inspection of local audit logs using **DB Browser for SQLite**:
+
+![SQLite DB Browser View](assets/soar_sqlite_gui_output.png)
 
 ### Step 5: Cloud Dashboard Persistence (MongoDB Atlas Cloud UI)
 Live document storage verified directly within the MongoDB Atlas cloud cluster dashboard, displaying structured JSON audit documents.
