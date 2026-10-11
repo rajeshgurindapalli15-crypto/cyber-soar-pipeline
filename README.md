@@ -1,4 +1,4 @@
-# 🛡️ Cloud-Native SOAR: Automated Threat Detection & Incident Response Pipeline
+### 🛡️ Cloud-Native SOAR: Automated Threat Detection & Incident Response Pipeline
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Database](https://img.shields.io/badge/Storage-SQLite3%20%7C%20MongoDB%20Atlas-green.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
@@ -33,7 +33,7 @@ When a security incident is triggered from the CLI, the pipeline initializes, lo
 ![SOAR Playbook Execution](assets/soar_execution_output.png)
 
 
-### Step 2: Automated Unit Testing
+## Step 2: Automated Unit Testing
 The system validates component resilience and data structures via automated `pytest` execution.
 
 ![Pytest Suite Passed](assets/soar_pytest_output.png)
@@ -57,7 +57,7 @@ Demonstrates automated, real-time incident dispatches triggered via Discord webh
 ![Discord Real-Time Alert Output](assets/soar_discord_alert_output.png)
 
 
-# Step 6: Local Edge Persistence (SQLite)
+## Step 6: Local Edge Persistence (SQLite)
 Below is the tabular inspection of local audit logs using **DB Browser for SQLite**:
 
 ![SQLite DB Browser View](assets/soar_sqlite_gui_output.png)
