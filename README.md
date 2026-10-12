@@ -27,16 +27,15 @@ flowchart TD
 
 Below is the sequential end-to-end operational proof demonstrating the `cyber-soar-pipeline` intercepting security threats, executing automated playbooks, persisting audit trails locally, and synchronizing data to the cloud in real-time.
 
-## Step 1: Automated SOAR Playbook Execution
-When a security incident is triggered from the CLI, the pipeline initializes, logs locally to SQLite, publishes threat intelligence to MongoDB Atlas, and dispatches an instant webhook alert[cite: 7, 10].
-
-![SOAR Playbook Execution](assets/soar_execution_output.png)
-
-
-## Step 2: Automated Unit Testing (Pytest)
+## Step 1: Automated Unit Testing (Pytest)
 The system validates component resilience and data structures via automated `pytest` execution.
 
 ![Pytest Suite Passed](assets/soar_pytest_output.png)
+
+## Step 2: Automated SOAR Playbook Execution
+When a security incident is triggered from the CLI, the pipeline initializes, logs locally to SQLite, publishes threat intelligence to MongoDB Atlas, and dispatches an instant webhook alert[cite: 7, 10].
+
+![SOAR Playbook Execution](assets/soar_execution_output.png)
 
 
 ## Step 3: Local Edge Persistence — CLI Audit Log
