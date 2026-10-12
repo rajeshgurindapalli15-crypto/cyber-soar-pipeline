@@ -67,7 +67,8 @@ Demonstrates automated, real-time incident dispatches triggered via Discord webh
 
 ![Discord Real-Time Alert Output](assets/soar_discord_alert_output.png)
 
-
+## 📜 License
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 
 
