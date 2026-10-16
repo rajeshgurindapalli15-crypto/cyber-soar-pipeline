@@ -1,9 +1,11 @@
 import os
 import time
 import random
+from datetime import datetime, timezone
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_FILE_PATH = os.path.join(BASE_DIR, "../tests/auth.log")
+
 ATTACK_IPS = [
     "46.165.230.5",  
     "18.204.45.12",  
@@ -15,10 +17,11 @@ def simulate_brute_force(ip):
     print(f"[⚔️] Launching automated Brute-Force Emulation vector from IP: {ip}")
     with open(LOG_FILE_PATH, "a") as file:
         for i in range(3):
-            log_line = f"2026-10-07 19:40:01 Failed password for root from {ip} port 49231 ssh2\n"
+            utc_timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+            log_line = f"{utc_timestamp} Failed password for root from {ip} port 49231 ssh2\n"
             file.write(log_line)
             file.flush()
-            print(f"    -> Injected authentication failure line {i+1}/3")
+            print(f"    -> Injected authentication failure line {i+1}/3 at {utc_timestamp}")
             time.sleep(1)
 
 def simulate_directory_scan(ip):
@@ -26,10 +29,11 @@ def simulate_directory_scan(ip):
     paths = ["/admin/config", "/phpmyadmin", "/etc/passwd"]
     with open(LOG_FILE_PATH, "a") as file:
         for path in paths:
-            log_line = f"2026-10-07 19:40:05 Directory Scan hit {path} from {ip}\n"
+            utc_timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+            log_line = f"{utc_timestamp} Directory Scan hit {path} from {ip}\n"
             file.write(log_line)
             file.flush()
-            print(f"    -> Injected unauthorized traversal signature for {path}")
+            print(f"    -> Injected unauthorized traversal signature for {path} at {utc_timestamp}")
             time.sleep(1)
 
 def run_adversarial_suite():
