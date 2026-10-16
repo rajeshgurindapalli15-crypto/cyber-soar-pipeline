@@ -4,6 +4,7 @@ import requests
 import re
 import sqlite3
 from dotenv import load_dotenv
+from datetime import datetime, timezone
 
 load_dotenv()
 
@@ -45,7 +46,7 @@ def archive_threat_actor(ip_address, threat_type, count, country, city, isp):
     try:
         conn = sqlite3.connect(DATABASE_PATH)
         cursor = conn.cursor()
-        current_time = time.strftime('%Y-%m-%d %H:%M:%S')
+        current_time = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
         cursor.execute('''
             INSERT INTO blocked_adversaries (timestamp, ip_address, threat_category, country, city, isp, events_count)
             VALUES (?, ?, ?, ?, ?, ?, ?)
@@ -70,6 +71,8 @@ def send_security_orchestration_alert(ip_address, threat_type, count):
     
     archive_threat_actor(ip_address, threat_type, count, country, city, isp)
     
+    timestamp_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    
     payload = {
         "username": "Next-Gen SOAR Engine",
         "embeds": [
@@ -80,12 +83,13 @@ def send_security_orchestration_alert(ip_address, threat_type, count):
                 "fields": [
                     {"name": "Threat Category", "value": f"⚔️ {threat_type}", "inline": True},
                     {"name": "Trigger Threshold", "value": f"{count} Events", "inline": True},
-                    {"name": "Attacker IP", "value": ip_address, "inline": False},
+                    {"name": "Attacker IP", "value": f"`{ip_address}`", "inline": False},
                     {"name": "Geographic Origin", "value": f"📍 {city}, {country}", "inline": True},
                     {"name": "Attacker Network (ISP)", "value": isp, "inline": True},
+                    {"name": "Timestamp (UTC)", "value": f"`{timestamp_str}`", "inline": False},
                     {"name": "Mitigation Strategy", "value": "🔒 Dynamic IP Drop Rule Injected to Firewall Edge Tables", "inline": False}
                 ],
-                "footer": {"text": f"KL Cyber Labs Sandbox Pipeline • {time.strftime('%Y-%m-%d %H:%M:%S')}"}
+                "footer": {"text": f"KL Cyber Labs Sandbox Pipeline • {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}"}
             }
         ]
     }
