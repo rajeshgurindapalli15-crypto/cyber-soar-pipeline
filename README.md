@@ -23,6 +23,17 @@ flowchart TD
     C -->|Webhook Alerting| F[Discord SOC Notification]
     C -->|Mitigation Engine| G[Firewall / NACL Rule Block]
 ```
+## 🔑 Core Technical Features
+
+| Feature | Technical Implementation | Value & Capabilities |
+| :--- | :--- | :--- |
+| **Event-Driven Ingestion** | Custom CLI & Engine | Ingests threat telemetry and parses inbound IP/attack vectors in real time. |
+| **Hybrid Storage Telemetry** | `SQLite3` & `MongoDB Atlas` | Maintains low-latency local edge logging (`SQLite3`) while syncing centralized threat intelligence (`MongoDB Atlas`). |
+| **SOC Webhook Alerting** | `Discord Webhooks` | Dispatches real-time, high-priority incident alerts directly to Security Operations Center (SOC) communication channels. |
+| **Automated Mitigation Engine** | `Firewall / NACL` | Programmatically enforces threat containment via automated firewall and network access control list rule blocks. |
+| **Terminal UI Dashboard** | `click` & `rich` | Renders interactive CLI execution steps, logs, and live pipeline status updates. |
+| **Automated Test Suite** | `pytest` | Validates alert parsing rules, integration paths, and database persistence workflows. |
+
 ## 🚀 Live Operational Execution & Verification
 
 Below is the sequential end-to-end operational proof demonstrating the `cyber-soar-pipeline` intercepting security threats, executing automated playbooks, persisting audit trails locally, and synchronizing data to the cloud in real-time.
