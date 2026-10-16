@@ -7,13 +7,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LOG_FILE_PATH = os.path.join(BASE_DIR, "../tests/auth.log")
+DATABASE_PATH = os.path.join(BASE_DIR, "../storage/threat_intel.db")
+
 DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
 if not DISCORD_WEBHOOK_URL:
     raise ValueError("DISCORD_WEBHOOK_URL is not set in your .env file!")
 
-LOG_FILE_PATH = "auth.log"
-DATABASE_PATH = "threat_intel.db"
 failed_logins = {}
 malicious_scans = {}
 
