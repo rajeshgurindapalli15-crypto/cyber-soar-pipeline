@@ -1,8 +1,9 @@
+import os
 import time
 import random
 
-LOG_FILE_PATH = "auth.log"
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LOG_FILE_PATH = os.path.join(BASE_DIR, "../tests/auth.log")
 ATTACK_IPS = [
     "46.165.230.5",  
     "18.204.45.12",  
