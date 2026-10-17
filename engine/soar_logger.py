@@ -4,10 +4,11 @@ import requests
 from datetime import datetime, timezone
 from pymongo import MongoClient
 from dotenv import load_dotenv
-
 load_dotenv()
 
-SQLITE_DB = "soar_audit.db"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SQLITE_DB = os.path.join(BASE_DIR, "..", "storage", "threat_intel.db")
+
 MONGO_URI = os.getenv("MONGO_URI")
 DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
@@ -39,7 +40,7 @@ def send_discord_alert(event_type, source_ip, severity, action_taken, timestamp)
     payload = {
         "embeds": [{
             "title": "🚨 SOAR Security Incident Alert",
-            "color": 15158332, # Red color for high-severity alerts
+            "color": 15158332, 
             "fields": [
                 {"name": "Event Type", "value": event_type, "inline": True},
                 {"name": "Severity", "value": severity, "inline": True},
