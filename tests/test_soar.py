@@ -1,7 +1,13 @@
+
 import os
 import sqlite3
 import pytest
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from engine.soar_logger import init_sqlite, SQLITE_DB
+
 def test_sqlite_initialization():
     """Verify local SQLite audit database and schema initialization."""
     if os.path.exists(SQLITE_DB):

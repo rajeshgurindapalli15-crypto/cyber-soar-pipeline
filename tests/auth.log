@@ -495,3 +495,30 @@
 2026-10-17 11:29:58 Directory Scan hit /admin/config from 185.220.101.5
 2026-10-17 11:29:59 Directory Scan hit /phpmyadmin from 185.220.101.5
 2026-10-17 11:30:00 Directory Scan hit /etc/passwd from 185.220.101.5
+2026-10-17 15:32:12 Failed password for root from 91.219.236.4 port 49231 ssh2
+2026-10-17 15:32:13 Failed password for root from 91.219.236.4 port 49231 ssh2
+2026-10-17 15:32:14 Failed password for root from 91.219.236.4 port 49231 ssh2
+2026-10-17 15:32:27 Directory Scan hit /admin/config from 185.220.101.5
+2026-10-17 15:32:28 Directory Scan hit /phpmyadmin from 185.220.101.5
+2026-10-17 15:32:29 Directory Scan hit /etc/passwd from 185.220.101.5
+2026-10-17 15:32:42 Failed password for root from 91.219.236.4 port 49231 ssh2
+2026-10-17 15:32:43 Failed password for root from 91.219.236.4 port 49231 ssh2
+2026-10-17 15:32:44 Failed password for root from 91.219.236.4 port 49231 ssh2
+2026-10-17 15:32:57 Failed password for root from 185.220.101.5 port 49231 ssh2
+2026-10-17 15:32:58 Failed password for root from 185.220.101.5 port 49231 ssh2
+2026-10-17 15:32:59 Failed password for root from 185.220.101.5 port 49231 ssh2
+2026-10-17 15:41:59 Failed password for root from 185.220.101.5 port 49231 ssh2
+2026-10-17 15:42:00 Failed password for root from 185.220.101.5 port 49231 ssh2
+2026-10-17 15:42:01 Failed password for root from 185.220.101.5 port 49231 ssh2
+2026-10-17 15:42:14 Failed password for root from 46.165.230.5 port 49231 ssh2
+2026-10-17 15:42:15 Failed password for root from 46.165.230.5 port 49231 ssh2
+2026-10-17 15:42:16 Failed password for root from 46.165.230.5 port 49231 ssh2
+2026-10-17 15:42:29 Directory Scan hit /admin/config from 185.220.101.5
+2026-10-17 15:42:30 Directory Scan hit /phpmyadmin from 185.220.101.5
+2026-10-17 15:42:31 Directory Scan hit /etc/passwd from 185.220.101.5
+2026-10-17 15:42:44 Failed password for root from 18.204.45.12 port 49231 ssh2
+2026-10-17 15:42:45 Failed password for root from 18.204.45.12 port 49231 ssh2
+2026-10-17 15:42:46 Failed password for root from 18.204.45.12 port 49231 ssh2
+2026-10-17 15:42:59 Failed password for root from 91.219.236.4 port 49231 ssh2
+2026-10-17 15:43:00 Failed password for root from 91.219.236.4 port 49231 ssh2
+2026-10-17 15:43:01 Failed password for root from 91.219.236.4 port 49231 ssh2

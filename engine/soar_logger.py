@@ -1,3 +1,4 @@
+
 import os
 import sqlite3
 import requests
@@ -8,11 +9,9 @@ from dotenv import load_dotenv
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
 dotenv_path = os.path.join(ROOT_DIR, ".env")
-
 load_dotenv(dotenv_path=dotenv_path)
 
 SQLITE_DB = os.path.join(ROOT_DIR, "storage", "threat_intel.db")
-
 MONGO_URI = os.getenv("MONGO_URI")
 DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
@@ -20,6 +19,7 @@ print(f"DEBUG: Root Dir -> {ROOT_DIR}")
 print(f"DEBUG: MONGO_URI loaded -> {bool(MONGO_URI)}")
 
 def init_sqlite():
+    os.makedirs(os.path.dirname(SQLITE_DB), exist_ok=True)
     conn = sqlite3.connect(SQLITE_DB)
     cursor = conn.cursor()
     cursor.execute('''
@@ -34,12 +34,11 @@ def init_sqlite():
     ''')
     conn.commit()
     conn.close()
-tls_insecure = os.getenv("MONGO_TLS_INSECURE", "false").lower() == "true"
 
-if tls_insecure:
-    mongo_client = MongoClient(MONGO_URI, tlsAllowInvalidCertificates=True)
-else:
+try:
     mongo_client = MongoClient(MONGO_URI)
+except Exception as e:
+    raise ConnectionError(f"CRITICAL: Failed to establish secure connection to MongoDB Atlas: {e}")
 
 db = mongo_client["cyber_soar_db"]
 alerts_collection = db["security_alerts"]
