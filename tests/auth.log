@@ -267,3 +267,12 @@
 2026-10-16 10:50:31 Directory Scan hit /admin/config from 46.165.230.5
 2026-10-16 10:50:32 Directory Scan hit /phpmyadmin from 46.165.230.5
 2026-10-16 10:50:33 Directory Scan hit /etc/passwd from 46.165.230.5
+2026-10-16 10:54:45 Failed password for root from 46.165.230.5 port 49231 ssh2
+2026-10-16 10:54:46 Failed password for root from 46.165.230.5 port 49231 ssh2
+2026-10-16 10:54:47 Failed password for root from 46.165.230.5 port 49231 ssh2
+2026-10-16 10:55:00 Failed password for root from 18.204.45.12 port 49231 ssh2
+2026-10-16 10:55:01 Failed password for root from 18.204.45.12 port 49231 ssh2
+2026-10-16 10:55:02 Failed password for root from 18.204.45.12 port 49231 ssh2
+2026-10-16 10:55:15 Directory Scan hit /admin/config from 185.220.101.5
+2026-10-16 10:55:16 Directory Scan hit /phpmyadmin from 185.220.101.5
+2026-10-16 10:55:17 Directory Scan hit /etc/passwd from 185.220.101.5
