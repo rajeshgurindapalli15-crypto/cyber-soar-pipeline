@@ -28,7 +28,13 @@ def init_sqlite():
     conn.commit()
     conn.close()
 
-mongo_client = MongoClient(MONGO_URI)
+tls_insecure = os.getenv("MONGO_TLS_INSECURE", "false").lower() == "true"
+
+if tls_insecure:
+    mongo_client = MongoClient(MONGO_URI, tlsAllowInvalidCertificates=True)
+else:
+    mongo_client = MongoClient(MONGO_URI)
+
 db = mongo_client["cyber_soar_db"]
 alerts_collection = db["security_alerts"]
 
