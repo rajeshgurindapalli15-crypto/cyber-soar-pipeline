@@ -90,6 +90,16 @@ The end-to-end operational lifecycle demonstrates the automated interception of 
     * SOC Integration: Dispatches dynamic, high-priority incident embeds to Security Operations Center channels.
     * Rich Telemetry: Includes attacker IP, geographic origin, ISP details, timestamp, and automated firewall mitigation strategies for immediate analyst visibility.
 
+## ⚙️ Installation & Setup
+
+```bash
+git clone https://github.com/rajeshgurindapalli15-crypto/cyber-soar-pipeline.git
+cd soar-security-engine
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python engine/cli.py scan --target tests/
+```
 ## 🚀 Live Operational Execution & Verification
 
 Below is the sequential end-to-end operational proof demonstrating the `cyber-soar-pipeline` intercepting security threats, executing automated playbooks, persisting audit trails locally, and synchronizing data to the cloud in real-time.
