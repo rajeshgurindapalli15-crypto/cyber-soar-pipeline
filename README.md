@@ -61,6 +61,36 @@ flowchart TD
 └── requirements.txt
 
 ```
+## 🧠 Engine Execution & Analysis Workflow
+## 🧠 Engine Execution & Analysis Workflow
+
+The end-to-end operational lifecycle demonstrates the automated interception of security threats, real-time playbook execution, local edge auditing, cloud synchronization, and multi-channel alerting.
+
+### Step 1: Automated Unit Testing (`pytest`)
+* **Execution**: Validates component resilience, data structures, and parser logic through automated test suites.
+* **Verification**: Confirms core module integrity before live execution.
+
+### Step 2: Automated SOAR Playbook Execution
+* **Trigger**: Security incidents are initialized via the command-line interface, instantly engaging the automated pipeline.
+* **Orchestration**: Concurrently logs events to local SQLite storage, publishes telemetry to MongoDB Atlas, and dispatches real-time webhooks[cite: 7, 10].
+
+### Step 3: Local Edge Persistence — CLI Audit Log
+* **Forensic Inspection**: Records individual and multi-vector security events locally with strict ISO 8601 UTC timestamps.
+* **Table Metrics**: Tracks event types, source IPs, severity levels, and automated mitigation actions taken.
+
+### Step 4: Local Edge Persistence — DB Browser (GUI)
+* **Tabular Inspection**: Provides a graphical database view using DB Browser for SQLite to inspect structured threat categories, geographic origins, and blocked adversaries.
+
+### Step 5: Centralized Cloud Threat Intelligence (MongoDB Atlas CLI View)
+* **Global Aggregation**: Queries the cloud cluster directly from the terminal interface to render a consolidated view of global threat intelligence using styled **Rich** tables.
+
+### Step 6: Cloud Dashboard Persistence (MongoDB Atlas UI)
+* **Document Verification**: Validates live document storage directly within the MongoDB Atlas cloud cluster dashboard, displaying structured JSON audit logs.
+
+### Step 7: Automated Real-Time Alerting (Discord Webhook)
+* **SOC Integration**: Dispatches dynamic, high-priority incident embeds to Security Operations Center channels.
+* **Rich Telemetry**: Includes attacker IP, geographic origin, ISP details, timestamp, and automated firewall mitigation strategies for immediate analyst visibility.
+
 ## 🚀 Live Operational Execution & Verification
 
 Below is the sequential end-to-end operational proof demonstrating the `cyber-soar-pipeline` intercepting security threats, executing automated playbooks, persisting audit trails locally, and synchronizing data to the cloud in real-time.
