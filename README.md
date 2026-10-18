@@ -34,6 +34,34 @@ flowchart TD
 | **Terminal UI Dashboard** | `click` & `rich` | Renders interactive CLI execution steps, logs, and live pipeline status updates. |
 | **Automated Test Suite** | `pytest` | Validates alert parsing rules, integration paths, and database persistence workflows. |
 
+ ## 📁 Project Directory Layout
+ ```text
+soar-security-engine/
+├── assets/
+│   ├── soar_discord_alert_output.png
+│   ├── soar_execution_output.png
+│   ├── soar_mongo_cli_output.png
+│   ├── soar_mongodb_atlas_ui.png
+│   ├── soar_pytest_output.png
+│   ├── soar_sqlite_gui_output.png
+│   └── soar_sqlite_output.png
+├── engine/
+│   ├── cli.py
+│   ├── soar_logger.py
+│   └── watchdog.py
+├── playbooks/
+│   └── attacker_sim.py
+├── tests/
+│   ├── auth.log
+│   ├── test_mongo.py
+│   └── test_soar.py
+├── .env.example
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
+
+```
 ## 🚀 Live Operational Execution & Verification
 
 Below is the sequential end-to-end operational proof demonstrating the `cyber-soar-pipeline` intercepting security threats, executing automated playbooks, persisting audit trails locally, and synchronizing data to the cloud in real-time.
