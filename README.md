@@ -62,7 +62,6 @@ flowchart TD
 
 ```
 ## 🧠 Engine Execution & Analysis Workflow
-## 🧠 Engine Execution & Analysis Workflow
 
 The end-to-end operational lifecycle demonstrates the automated interception of security threats, real-time playbook execution, local edge auditing, cloud synchronization, and multi-channel alerting.
 
