@@ -94,7 +94,7 @@ The end-to-end operational lifecycle demonstrates the automated interception of 
 
 ```bash
 git clone https://github.com/rajeshgurindapalli15-crypto/cyber-soar-pipeline.git
-cd soar-security-engine
+cd cyber-soar-pipeline
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
