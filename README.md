@@ -15,13 +15,34 @@ The pipeline utilizes a hybrid storage architecture: local edge logging to **SQL
 
 ```mermaid
 flowchart TD
-    A[Telemetry / Attack Event] -->|Inbound IP & Vector| B[CLI / Engine Ingestion]
-    B --> C{SOAR Orchestration Engine}
-    
-    C -->|Local Edge Logging| D[(SQLite Audit Log)]
-    C -->|Cloud Threat Sync| E[(MongoDB Atlas Cluster)]
-    C -->|Webhook Alerting| F[Discord SOC Notification]
-    C -->|Mitigation Engine| G[Firewall / NACL Rule Block]
+    subgraph Ingress ["1. Ingestion Tier"]
+        A[Telemetry / Attack Event] -->|Inbound IP & Vector| B[CLI / Engine Ingestion]
+    end
+
+    subgraph Core ["2. Orchestration Tier"]
+        B --> C{SOAR Orchestration Engine}
+    end
+
+    subgraph Storage ["3. Persistence Tier"]
+        C -->|Local Edge Logging| D[(SQLite Audit Log)]
+        C -->|Cloud Threat Sync| E[(MongoDB Atlas Cluster)]
+    end
+
+    subgraph Actions ["4. Action & Enforcement Tier"]
+        C -->|Webhook Alerting| F[Discord SOC Notification]
+        C -->|Mitigation Engine| G[Firewall / NACL Rule Block]
+    end
+
+    %% Professional Functional Color Styling
+    classDef ingressStyle fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000;
+    classDef coreStyle fill:#ede7f6,stroke:#4527a0,stroke-width:2px,color:#000;
+    classDef storageStyle fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000;
+    classDef actionStyle fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000;
+
+    class A,B ingressStyle;
+    class C coreStyle;
+    class D,E storageStyle;
+    class F,G actionStyle;
 ```
 ## 🔑 Core Technical Features
 
