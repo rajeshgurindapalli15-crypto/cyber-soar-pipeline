@@ -36,7 +36,6 @@ flowchart TD
 
  ## 📁 Project Directory Layout
  ```text
-soar-security-engine/
 ├── assets/
 │   ├── soar_discord_alert_output.png
 │   ├── soar_execution_output.png
